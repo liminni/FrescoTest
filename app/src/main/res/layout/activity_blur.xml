@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_blur"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:id="@+id/blur_simple_drawee"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/circle_simple_drawee"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="#ffffff"
+        fresco:roundingBorderWidth="2dp"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

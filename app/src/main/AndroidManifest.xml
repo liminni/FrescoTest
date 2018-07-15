@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lixiaoming.frescotest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".application.FrescoTestApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="myapp" android:host="jp.app" android:pathPrefix="/openwith"/>
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".activity.BaseActivity" />
+        <activity android:name=".activity.BasicUsageActivity" />
+        <activity android:name=".activity.ListViewUsageActivity" />
+        <activity android:name=".activity.RecyclerViewUsageActivity" />
+        <activity android:name=".activity.PhotoViewActivity" />
+        <activity android:name=".activity.SubsamplingScaleImageActivity" />
+        <activity android:name=".activity.GifImageActivity" />
+        <activity android:name=".activity.BlurActivity" />
+        <activity android:name=".activity.AlbumActivity" />
+        <activity
+            android:name="com.yanzhenjie.album.AlbumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
+        <activity android:name=".activity.OkHttpBorkerActivity"></activity>
+    </application>
+
+</manifest>
